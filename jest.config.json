@@ -1,0 +1,16 @@
+{
+  "testEnvironment": "node",
+  "extensionsToTreatAsEsm": [".ts"],
+  "verbose": true,
+  "moduleNameMapper": {
+    "\\.\\./src/(.*)\\.js" : "../out/$1.js"
+  },
+  "transform": {
+  "^.+\\.test\\.(ts|tsx)?$": ["ts-jest",
+    {
+      "useESM": true
+    }]
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": ["out/**/*.js"]
+}

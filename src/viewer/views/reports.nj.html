@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports Tree Visualization</title>
+    <script src="/reports-tree.js"></script>
+    <style>
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 2px;
+        }
+        .node text {
+            font: 12px sans-serif;
+        }
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1px;
+        }
+        .node circle:hover {
+            fill: #f0f0f0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reports Tree Visualization</h1>
+    <p><a href="/runs">Back to Runs List</a></p>
+    <div id="tree-container"></div>
+    <script>
+        ReportsTree.initializeTree({{ reports | dump | safe }});
+    </script>
+</body>
+</html>

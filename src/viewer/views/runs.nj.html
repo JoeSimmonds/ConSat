@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constraint Solver Viewer</title>
+</head>
+<body>
+    <h1>Runs</h1>
+    <ul>
+    {% for run in runs %}
+        <li><a href="reports/{{ run.runId }}">{{ run.runId }}</a> ({{ run.timestamp.toLocaleString() }})</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
